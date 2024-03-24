@@ -1,0 +1,272 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: #e9e9e9;;
+  }
+  
+  ul {
+    padding-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  li {
+    list-style-type: none;
+    padding: 10px 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 2em;
+  }
+  /*
+  .card {
+    display: block;
+    width: 150px;
+    height: 175px;
+    padding: 80px 50px;
+    background-color: #51aae5;
+    border-radius: 7px;
+    margin: 5px;
+    text-align: center;
+    line-height: 27px;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+    box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+    will-change: transform;
+  }
+  */
+  /*
+  li:hover{
+    transform: scale(1.1);
+  }
+  */
+  /*
+  li:nth-child(-n+3) .card{
+    background-color: #e65f51;
+    }
+  
+  li:nth-child(2n+1) .card{
+    background-color: #a17de9;
+    }
+  
+  li:nth-child(4n) .card{
+    background-color: #feca34;
+    }
+  
+  li:nth-child(5n-2) .card{
+    background-color: #51aae5;
+    }
+  
+  li:nth-child(4n+4) .card{
+    background-color: #feca34;
+    }
+  
+  li:nth-child(-7n+7) .card{
+    background-color: #e46055;
+    }
+  */
+  .delete-card {
+    position: absolute;
+    color: #44a042;
+    right: 0;
+    top: 0;
+    padding: 10px 15px;
+    opacity: .4;
+    transition: all 0.5s ease;
+  }
+  
+  .delete-card:hover, .error {
+    opacity: 1;
+    color: #70a66f;
+    transform: size(1.1);
+  }
+  
+  .flip-enter-active {
+    transition: all 0.4s ease;
+  }
+  
+  .flip-leave-active {
+    display: none;
+  }
+  
+  .flip-enter, .flip-leave {
+    transform: rotateY(180deg);
+    opacity: 0;
+  
+  }
+/*
+  .card {
+ --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+ width: 190px;
+ height: 254px;
+ padding: 5px;
+ border-radius: 1rem;
+ overflow: visible;
+ background: #f7ba2b;
+ background: var(--background);
+ position: relative;
+ z-index: 1;
+}
+
+.card-info {
+ --color: #181818;
+ background: var(--color);
+ color: var(--color);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 100%;
+ overflow: visible;
+ border-radius: .7rem;
+}
+
+ */
+   
+  .card {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -5px -5px 30px #ffffff;
+    transition: all .3s;
+    text-align: center;
+    line-height: 27px;
+   }
+   
+   .card2 {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -5px -5px 30px #ffffff;
+    transition: all .2s;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 20px;
+   }
+   
+   .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+   
+   .card:hover {
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.233);
+  }
+  /* Form */
+  .flashcard-form{
+    position: relative;
+  }
+  
+  
+  label{
+    font-weight: 400;
+    color: #e00000;
+    margin-right: 10px;
+  }
+  /* input */
+  .input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+  }
+  
+  .input-container input[type="text"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label,
+  .input-container input[type="text"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #87cb84;;
+    /*You can change the color of the line here*/
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .input-container input[type="text"]:focus ~ .underline,
+  .input-container input[type="text"]:valid ~ .underline {
+    transform: scaleX(1);
+  }
+  /* button */
+  input{
+    border-radius: 5px;
+    border: 2px solid #d60e0e;
+    padding: 10px;
+    outline: none;
+  }
+  
+  button{
+    border-radius: 5px;
+    border: 1px solid #87cb84;
+    background-color: #87cb84;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover{
+    background-color: #70a66f;
+  }
+  
+  .error{
+    margin-top: 10px;
+    display: block;
+    color: #000000;
+    font-weight: 600;
+  }
+
+  .input-container-left {
+    position: relative;
+    right: 20%;
+    scale: 1.2;
+  
+  }
+  
+  .input-container-right {
+    position: relative;
+    left: 20%;
+    scale: 1.2;
+  }
